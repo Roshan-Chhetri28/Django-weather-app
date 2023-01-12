@@ -1,0 +1,56 @@
+
+#bga{
+    background:linear-gradient(-45deg, pink, blue);
+}
+#bg{
+    margin-top: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:70vh;
+    width:70vw;
+}
+ 
+.d{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.d img{
+    background-position: center;
+}
+.d :hover{
+    width: 35vw;
+    background-color: #e8f5f7;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 black;
+    cursor: default;
+    transition: 0.3s;
+}
+.p{
+    text-align: center;
+    width:33vw;
+}
+.w :hover{
+    color: greenyellow;
+    transition: 0.3s;
+}
+.fon{
+    font-family: monospace;
+}
+#we{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    height: 100%;
+    border: 2px solid #e8f5f7;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 black;
+    cursor: default;
+    transition: 0.3s;
+}
+#we:hover{
+    border-color: greenyellow;
+    transition: 0.3s;
+}

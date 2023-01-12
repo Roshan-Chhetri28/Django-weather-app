@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+{% csrf_token %}
+{% block styles %}
+{% endblock styles %} {% block body %}
+<div class="body" style="background: linear-gradient(blue, orange); color: black">
+
+  {% comment %} <div class="row row-cols-1 row-cols-md-3 mb-3 text-center my-3">
+
+    <div class="col-3">
+
+    </div> {% endcomment %}
+
+
+    <div id="dev" style="padding-left: 3vw;">
+
+      <div class="about">
+        <h5>About this app:</h5>
+
+        <p>
+          A weather app made using Django as main framework. To fetch the data
+          required an API is used the templates are made using HTML designed
+          using css & bootstrap and the logic for buttons and backgrounds are
+          written in Javascript.
+        </p>
+        <h3>What is Django?</h3>
+        <p>
+          Django is a high-level Python web framework that encourages rapid
+          development and clean, pragmatic design. Built by experienced
+          developers, it takes care of much of the hassle of web development, so
+          you can focus on writing your app without needing to reinvent the
+          wheel. It’s free and open source.
+        </p>
+        <dl>
+          <dt><i class="icon icon-bolt inview"></i> Ridiculously fast.</dt>
+          <dd>
+            <p>
+              Django was designed to help developers take applications from
+              concept to completion as quickly as possible.
+            </p>
+          </dd>
+
+          <dt><i class="icon icon-lock inview"></i> Reassuringly secure.</dt>
+          <dd>
+            <p>
+              Django takes security seriously and helps developers avoid many
+              common security mistakes.
+            </p>
+          </dd>
+
+          <dt>
+            <i class="icon icon-dashboard inview"></i> Exceedingly scalable.
+          </dt>
+          <dd>
+            <p>
+              Some of the busiest sites on the web leverage Django’s ability to
+              quickly and flexibly scale.
+            </p>
+          </dd>
+        </dl>
+
+        <h1 style="font-size: medium">made by:</h1>
+        <p>Roshan Chhetri</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="body">
+  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center my-5">
+    <div class="col"></div>
+  </div>
+</div>
+{% block script %}
+   <script src= {% static 'script.js' %} ></script>
+    <script src={% static 'script2.js' %}></script>
+{% endblock script %}
+{% endblock body %}

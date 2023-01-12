@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock style %}
+{% block body %}
+<main class="d" >
+        <div id="bg">
+        <div class="card mb-4 rounded-3 shadow-sm p" style="background: linear-gradient(yellow, aqua);">
+          <div id="ma">
+          <a href="weather" class="hov" style="text-decoration: none; color: black;">
+          <div class="card-header py-3">
+
+            <h4 class="my-0 fw-normal"><span id="cityname" style="text-transform: capitalize;"></span></h4>
+            <br />
+            
+            <li  style="text-transform: capitalize;">temperature:
+              <span id="temp" class="d-inline">
+              </span>
+            </li>
+            <small class="text-muted fw-light d-inline">
+              &deg;C
+            </small>
+          </a>
+          </div>
+          
+            <div class="card-body" >
+              <ul class="list-unstyled mt-3 mb-4 " style="font-family: monospace;">
+                <li>Mininum temp: <span id="min_temp"></span></li>
+                <li>Maximum temp: <span id="max_temp"></span></li>
+                <li>Feels like: <span id="feels_like"></span></li>
+                <li>Humidity: <span id="humidity"></span>&percnt;</li>
+                <li>Wind speed: <span id="wind_speed"></span></li>
+                <li>Wind degrees: <span id="wind_degrees"></span></li>
+              </ul>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% block script %}
+<script src={% static 'script.js' %}></script>
+<script src={% static 'script2.js' %}></script>
+{% endblock script %}
+
+
+{% endblock body %}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Weather{% endblock title %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock style %}
+</head>
+{% block body %}
+
+<div id="b">
+            <div class="card mb-4 rounded-3 shadow-sm" style="width: 40vw; height: 60vh; margin: auto; text-align: center; margin-top: 14vh;" >
+                <div class="card-header py-3" style="height: 60vh;" >
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner"  style="color: black; padding-top: 15vh; font-size: large; font-family: monospace;">
+
+                            <div class="carousel-item active">
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <h4 class="my-0 fw-normal"><span id="cityname" class="main"></span></h4>
+                                    <br />
+                                    <li class="main">Mininum temp: <span id="min_temp"></span></li>
+                                    <li class="main">Maximum temp: <span id="max_temp"></span></li>
+                                    <li class="main">Feels like: <span id="feels_like"></span></li>
+                                    <li class="main">Humidity: <span id="humidity"></span>&percnt;</li>
+                                    <li class="main">Wind speed: <span id="wind_speed"></span></li>
+                                    <li class="main">Wind degrees: <span id="wind_degrees"></span></li>
+                                </ul>
+                            </div>
+                            <div class="carousel-item">
+
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <h4 class="my-0 fw-normal"><span id="cityname2" class="main"></span></h4>
+                                    <br />
+                                    <li class="main">Mininum temp: <span id="min_temp2"></span></li>
+                                    <li class="main">Maximum temp: <span id="max_temp2"></span></li>
+                                    <li class="main">Feels like: <span id="feels_like2"></span></li>
+                                    <li class="main">Humidity: <span id="humidity2"></span>&percnt;</li>
+                                    <li class="main">Wind speed: <span id="wind_speed2"></span></li>
+                                    <li class="main">Wind degrees: <span id="wind_degrees2"></span></li>
+                                </ul>
+                            </div>
+                            <div class="carousel-item">
+
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <h4 class="my-0 fw-normal"><span id="cityname3" class="main"></span></h4>
+                                    <br />
+                                    <li class="main">Mininum temp: <span id="min_temp3"></span></li>
+                                    <li class="main">Maximum temp: <span id="max_temp3"></span></li>
+                                    <li class="main">Feels like: <span id="feels_like3"></span></li>
+                                    <li class="main">Humidity: <span id="humidity3"></span>&percnt;</li>
+                                    <li class="main">Wind speed: <span id="wind_speed3"></span></li>
+                                    <li class="main">Wind degrees: <span id="wind_degrees3"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                         data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                            <span style="color: black;" >Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span style="color: black;">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+<script src={% static "weather.js" %}></script>
+{% block script %}
+<!-- <script src={% static 'script2.js' %}></script> -->
+<script src={% static 'weather.js' %}></script>
+{% endblock script %}
+
+{% endblock body %}
